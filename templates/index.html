@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block title %}MAIN INDEX{% endblock %}
+
+{% block content %}
+<center>
+<h1 style="color:black">¡Crea aquí tus notas!</h1>
+<br>
+<br>
+<form action="/crearnota" method="post">
+    
+    <label>Título de la nota:</label><br>
+    <input type="text" id="campoTitulo" name="campoTitulo" value=""><br>
+    <label>Cuerpo de la nota:</label><br>
+    <input type="text" id="campoCuerpo" name="campoCuerpo" value=""><br>
+    <div class="buttons">
+    <input type="submit" value="Enviar">
+ 
+</div>
+</form>
+{{respuesta}}
+{{titulo}}
+{{cuerpo}}
+
+
+<a href="{{ url_for('leernotas') }}">Mostrar tabla de notas</a>
+
+{% endblock %}
+

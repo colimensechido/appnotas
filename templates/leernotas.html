@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block title %}LEER NOTAS{% endblock %}
+
+{% block content %}
+<center>
+<table>
+    <caption>Notas</caption>
+    <tr>
+        <td><strong>Titulo</strong></td>
+        <td><strong>Descripción</strong></td>
+        <td colspan="2"><strong>Opciones</strong></td>
+    </tr>
+    {% for nota in consulta %}
+    <tr>
+        <td>{{nota.tituloNota}}</td>
+        <td>{{nota.cuerpoNota}}</td>
+        <td><a href="/editarnota/{{nota.idNota}}">Editar</a> - <a href="/eliminarnota/{{nota.idNota}}">Eliminar</a></td>
+    </tr>
+    {% endfor %}
+</table>
+</center>
+{% endblock %}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{% block title %}{% endblock %}</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+	<div class="wrapper">
+			<nav class="navbar">
+				<img class="logo" src="{{ url_for('static', filename='logo.png') }}">
+				<ul>
+					<li><a href="{{ url_for('index') }}">Crear notas</a></li>
+					<li><a href="{{ url_for('leernotas') }}">Leer notas</a></li>
+					<li><a href="{{ url_for('about') }}">About</a></li>
+				</ul>
+			</nav>
+			<div class="center">
+                <div class="card">
+                    <div class="container">
+                        {% block content %}
+                        
+                      {% endblock %}
+                    </div>
+                    
+                  </div>
+		</div>
+		</div>
+</body>
+</html>

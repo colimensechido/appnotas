@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block title %}LEER NOTAS{% endblock %}
+
+{% block content %}
+<center>
+    <h2 style="color:black">AHORA MISMO ESTÁS MODIFICANDO LA NOTA {{nota.tituloNota}}</h2>
+    <form action="/modificar" method="post">
+    
+        <label>Título de la nota:</label><br>
+        <input type="text" id="campoTitulo" name="campoTitulo" value="{{nota.tituloNota}}"><br>
+        <label>Cuerpo de la nota:</label><br>
+        <input type="textarea" id="campoCuerpo" name="campoCuerpo" value="{{nota.cuerpoNota}}"><br>
+        <input type="hidden" name="idNota" value="{{nota.idNota}}">
+        <div class="buttons">
+        <input type="submit" value="Modificar NOTA">
+     
+    </div>
+    </form>
+
+</center>
+{% endblock %}
