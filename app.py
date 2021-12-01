@@ -4,7 +4,7 @@ from werkzeug.utils import redirect
 
 app = Flask(__name__)
 db = SQLAlchemy(app)
-app.config['SQLALCHEMY_DATABASE_URI']  = 'postgresql://postgres:1234@localhost:5432/notas'
+app.config['SQLALCHEMY_DATABASE_URI']  = 'postgres://vbpzfzrismbwev:ec152dc8bd23fc9c8835b9903c5b3142abb6ae412247c0cbfb05ce15a3fd68cf@ec2-184-73-25-2.compute-1.amazonaws.com:5432/d6pg9eui8hb3dt'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 
