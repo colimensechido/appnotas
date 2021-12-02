@@ -1,6 +1,5 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect
 from flask_sqlalchemy import SQLAlchemy
-from werkzeug.utils import redirect
 
 app = Flask(__name__)
 db = SQLAlchemy(app)
